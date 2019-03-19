@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head><title>it's the node! sort of!</title></head>
+<body>
+<!-- scale: 10 units = 1 foot -->
+<canvas id='canvas' width='500' height='510'></canvas>
+<script>
+var c = document.getElementById("canvas").getContext("2d");
+c.beginPath();
+
+// overall space
+c.rect(0, 0, 500, 510);
+
+// clean room (including bathroom and storage)
+c.rect(0, 0, 155, 200);
+
+// clean room bathroom/storage notch
+c.rect(155 - 45, 0, 45, 120);
+
+// bathroom
+c.rect(155 - 45, 0, 45, 45);
+
+// cnc router
+c.rect(0, 200, 155, 80);
+
+// table saw
+c.rect(155 + 80 / 12, 135 + 200, 30, 60);
+
+// garage door
+c.rect(195, 510 - 5, 80, 5);
+
+// hvac
+c.rect(500 - 155 - 80 / 12 - 20, 510 - 20, 20, 20);
+
+// stairs
+c.rect(500 - 60 - (40 + 100 / 12), 510 - 82.5 - 140, 40 + 100 / 12, 140);
+
+// digifab
+c.rect(500 - 140, 0, 140, 80);
+
+c.stroke();
+
+/*************************/
+/* things on the ceiling */
+/*************************/
+c.beginPath();
+c.strokeStyle = 'rgb(128, 128, 128)';
+c.setLineDash([2.5]);
+
+// 8" beam, south side
+c.rect(155, 0, 80 / 12, 510);
+
+// 8" beam, north side
+c.rect(500 - 155 - 80 / 12, 0, 80 / 12, 510);
+
+// duct
+c.rect(500 - 155 - 80 / 12 - 20, 105, 20, 510 - 105 - 20);
+
+c.stroke();
+</script>
+</body>
+</html>
