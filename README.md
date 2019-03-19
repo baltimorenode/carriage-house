@@ -1,3 +1,3 @@
-If you're lucky, this link will let you see the rendered canvas without downloading the HTML file:
+See the HTML rendered by your browser at:
 
-https://cors.io/?https://raw.githubusercontent.com/baltimorenode/carriage-house/master/floor-plan.html
+https://baltimorenode.github.io/carriage-house/
